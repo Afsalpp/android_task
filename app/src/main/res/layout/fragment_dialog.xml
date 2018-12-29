@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#FFFFFF"
+    android:layout_centerVertical="true"
+    android:clickable="true"
+    android:focusable="true"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/text_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
+        <TextView
+            android:id="@+id/no_pref"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:layout_toRightOf="@id/radioMode"
+            android:layout_marginTop="30dp"
+            android:textColor="#000000"
+            android:hint="No Preference"/>
+
+        <TextView
+            android:id="@+id/e_payment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/radioMode"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="30dp"
+            android:layout_below="@id/no_pref"
+            android:textColor="#000000"
+            android:hint="e-payment"/>
+
+        <TextView
+            android:id="@+id/cash"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/radioMode"
+            android:layout_marginRight="20dp"
+            android:layout_below="@id/e_payment"
+            android:layout_marginTop="30dp"
+            android:layout_alignParentRight="true"
+            android:textColor="#000000"
+            android:hint="Cash"/>
+
+        <RadioGroup
+            android:id="@+id/radioMode"
+            android:layout_width="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="30dp"
+            android:layout_height="wrap_content">
+
+
+            <RadioButton
+                android:id="@+id/radio_pref"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="20dp"
+                style="@style/AlertDialog.AppCompat"
+                android:textAppearance="@style/AlertDialog.AppCompat"
+                android:layout_alignParentEnd="true"/>
+
+            <RadioButton
+                android:id="@+id/radio_payment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="20dp"
+                android:layout_below="@id/radio_pref"
+                android:layout_alignParentEnd="true"/>
+
+            <RadioButton
+                android:id="@+id/radio_cash"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="20dp"
+                android:layout_below="@id/radio_payment"
+                android:layout_alignParentEnd="true"/>
+
+
+
+        </RadioGroup>
+    </RelativeLayout>
+    
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:layout_below="@id/text_layout">
+        <Button
+            android:id="@+id/cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" 
+            android:text="Cancel"
+            />
+        
+        <Button
+            android:id="@+id/select"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select"
+            android:layout_marginLeft="15dp"
+            android:layout_toRightOf="@id/cancel"/>
+    </RelativeLayout>
+
+</RelativeLayout>
